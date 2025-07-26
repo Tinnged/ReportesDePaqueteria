@@ -1,0 +1,598 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\views\\createshipmentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\views\\createshipmentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\views\\incidentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\views\\incidentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\models\\trackinginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\models\\trackinginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\views\\incidenthistoryview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\views\\incidenthistoryview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\views\\incidentdetailsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\views\\incidentdetailsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\views\\createincidentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\views\\createincidentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\views\\trackingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\views\\trackingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\views\\incidentdetailsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\views\\incidentdetailsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\converters\\prioritytocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\converters\\prioritytocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\views\\shipmentdetailsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\views\\shipmentdetailsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\views\\profileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\views\\profileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\views\\shipmentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\views\\shipmentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\converters\\datetimetostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\converters\\datetimetostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\converters\\inversebooleanconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\converters\\inversebooleanconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\viewmodels\\createincidentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\viewmodels\\createincidentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\viewmodels\\createshipmentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\viewmodels\\createshipmentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\viewmodels\\trackingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\viewmodels\\trackingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\viewmodels\\incidentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\viewmodels\\incidentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\viewmodels\\shipmentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\viewmodels\\shipmentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\models\\trackingevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\models\\trackingevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\models\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\models\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|c:\\users\\gabriel\\source\\repos\\reportesdepaqueteria\\reportesdepaqueteria\\mvvm\\models\\incident.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895A32CA-BDD8-421B-9519-D43D6F047CC9}|ReportesDePaqueteria.csproj|solutionrelative:mvvm\\models\\incident.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IncidentDetailsView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\IncidentDetailsView.xaml.cs",
+              "RelativeDocumentMoniker": "MVVM\\Views\\IncidentDetailsView.xaml.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\IncidentDetailsView.xaml.cs",
+              "RelativeToolTip": "MVVM\\Views\\IncidentDetailsView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T23:25:18.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PriorityToColorConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Converters\\PriorityToColorConverter.cs",
+              "RelativeDocumentMoniker": "MVVM\\Converters\\PriorityToColorConverter.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Converters\\PriorityToColorConverter.cs",
+              "RelativeToolTip": "MVVM\\Converters\\PriorityToColorConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T23:05:41.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MainPage.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T23:02:59.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IncidentDetailsView.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\IncidentDetailsView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\IncidentDetailsView.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\IncidentDetailsView.xaml",
+              "RelativeToolTip": "MVVM\\Views\\IncidentDetailsView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T22:00:35.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TrackingView.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\TrackingView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\TrackingView.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\TrackingView.xaml",
+              "RelativeToolTip": "MVVM\\Views\\TrackingView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T21:59:25.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\ProfileViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\ViewModels\\ProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\ProfileViewModel.cs",
+              "RelativeToolTip": "MVVM\\ViewModels\\ProfileViewModel.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAIwAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:49:51.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateShipmentView.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\CreateShipmentView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\CreateShipmentView.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\CreateShipmentView.xaml",
+              "RelativeToolTip": "MVVM\\Views\\CreateShipmentView.xaml",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAHsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T21:59:51.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateIncidentView.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\CreateIncidentView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\CreateIncidentView.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\CreateIncidentView.xaml",
+              "RelativeToolTip": "MVVM\\Views\\CreateIncidentView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T22:00:08.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IncidentHistoryView.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\IncidentHistoryView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\IncidentHistoryView.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\IncidentHistoryView.xaml",
+              "RelativeToolTip": "MVVM\\Views\\IncidentHistoryView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T22:00:46.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TrackingInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\TrackingInfo.cs",
+              "RelativeDocumentMoniker": "MVVM\\Models\\TrackingInfo.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\TrackingInfo.cs",
+              "RelativeToolTip": "MVVM\\Models\\TrackingInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:29:02.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IncidentsView.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\IncidentsView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\IncidentsView.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\IncidentsView.xaml",
+              "RelativeToolTip": "MVVM\\Views\\IncidentsView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T21:59:06.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T23:04:32.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T23:04:10.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T23:03:06.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ShipmentsView.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\ShipmentsView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\ShipmentsView.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\ShipmentsView.xaml",
+              "RelativeToolTip": "MVVM\\Views\\ShipmentsView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T21:58:36.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginView.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\LoginView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\LoginView.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\LoginView.xaml",
+              "RelativeToolTip": "MVVM\\Views\\LoginView.xaml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T22:01:01.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\AppShell.xaml.cs",
+              "RelativeToolTip": "AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T22:43:45.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProfileView.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\ProfileView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\ProfileView.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\ProfileView.xaml",
+              "RelativeToolTip": "MVVM\\Views\\ProfileView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T21:59:37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ShipmentDetailsView.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\ShipmentDetailsView.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\ShipmentDetailsView.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Views\\ShipmentDetailsView.xaml",
+              "RelativeToolTip": "MVVM\\Views\\ShipmentDetailsView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T22:00:19.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-25T22:42:24.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "InverseBooleanConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Converters\\InverseBooleanConverter.cs",
+              "RelativeDocumentMoniker": "MVVM\\Converters\\InverseBooleanConverter.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Converters\\InverseBooleanConverter.cs",
+              "RelativeToolTip": "MVVM\\Converters\\InverseBooleanConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:55:13.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DateTimeToStringConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Converters\\DateTimeToStringConverter.cs",
+              "RelativeDocumentMoniker": "MVVM\\Converters\\DateTimeToStringConverter.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Converters\\DateTimeToStringConverter.cs",
+              "RelativeToolTip": "MVVM\\Converters\\DateTimeToStringConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:54:57.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CreateIncidentViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\CreateIncidentViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\ViewModels\\CreateIncidentViewModel.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\CreateIncidentViewModel.cs",
+              "RelativeToolTip": "MVVM\\ViewModels\\CreateIncidentViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:53:46.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CreateShipmentViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\CreateShipmentViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\ViewModels\\CreateShipmentViewModel.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\CreateShipmentViewModel.cs",
+              "RelativeToolTip": "MVVM\\ViewModels\\CreateShipmentViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:53:03.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TrackingViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\TrackingViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\ViewModels\\TrackingViewModel.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\TrackingViewModel.cs",
+              "RelativeToolTip": "MVVM\\ViewModels\\TrackingViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:48:54.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IncidentsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\IncidentsViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\ViewModels\\IncidentsViewModel.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\IncidentsViewModel.cs",
+              "RelativeToolTip": "MVVM\\ViewModels\\IncidentsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:48:05.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ShipmentsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\ShipmentsViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\ViewModels\\ShipmentsViewModel.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\ShipmentsViewModel.cs",
+              "RelativeToolTip": "MVVM\\ViewModels\\ShipmentsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:46:20.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "MVVM\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:34:15.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "MVVM\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:33:53.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "TrackingEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\TrackingEvent.cs",
+              "RelativeDocumentMoniker": "MVVM\\Models\\TrackingEvent.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\TrackingEvent.cs",
+              "RelativeToolTip": "MVVM\\Models\\TrackingEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:32:17.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Address.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\Address.cs",
+              "RelativeDocumentMoniker": "MVVM\\Models\\Address.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\Address.cs",
+              "RelativeToolTip": "MVVM\\Models\\Address.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:29:49.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\User.cs",
+              "RelativeDocumentMoniker": "MVVM\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\User.cs",
+              "RelativeToolTip": "MVVM\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:28:46.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Incident.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\Incident.cs",
+              "RelativeDocumentMoniker": "MVVM\\Models\\Incident.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\Incident.cs",
+              "RelativeToolTip": "MVVM\\Models\\Incident.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:28:36.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Shipment.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\Shipment.cs",
+              "RelativeDocumentMoniker": "MVVM\\Models\\Shipment.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\ReportesDePaqueteria\\ReportesDePaqueteria\\MVVM\\Models\\Shipment.cs",
+              "RelativeToolTip": "MVVM\\Models\\Shipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T21:28:20.488Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

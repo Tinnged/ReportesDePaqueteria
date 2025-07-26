@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:vm="clr-namespace:ReportesDePaqueteria.MVVM.ViewModels"
+                xmlns:converters="clr-namespace:ReportesDePaqueteria.MVVM.Converters"
+             x:Class="ReportesDePaqueteria.MVVM.Views.TrackingView"
+             Title="{Binding Title}"
+             BackgroundColor="#F5F5F5">
+
+    <ContentPage.Resources>
+        <converters:DateTimeToStringConverter x:Key="DateConverter"/>
+        <converters:InverseBooleanConverter x:Key="InverseBool"/>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <vm:TrackingViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView Padding="20">
+        <VerticalStackLayout Spacing="20">
+
+            <!-- Header -->
+            <Grid>
+                <Image Source="tracking_hero.png" 
+                       HeightRequest="150" 
+                       Aspect="AspectFit"
+                       Opacity="0.1"/>
+                <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="🔍" FontSize="60" HorizontalOptions="Center"/>
+                    <Label Text="Rastrear Envío"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="#333"/>
+                    <Label Text="Ingrese el código de su envío"
+                           FontSize="14"
+                           HorizontalOptions="Center"
+                           TextColor="#666"/>
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- Search Card -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="20" 
+                   HasShadow="True" 
+                   Padding="20">
+                <VerticalStackLayout Spacing="15">
+
+                    <Border StrokeThickness="2" 
+                            Stroke="#E0E0E0" 
+                            BackgroundColor="#F8F8F8" 
+                            Padding="15,10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="15"/>
+                        </Border.StrokeShape>
+                        <Entry Text="{Binding TrackingCode}"
+                               Placeholder="Ej: ENV-2025-001"
+                               TextColor="#333"
+                               PlaceholderColor="#999"
+                               FontSize="18"
+                               HorizontalTextAlignment="Center"
+                               CharacterSpacing="2"/>
+                    </Border>
+
+                    <Button Text="Buscar"
+                            Command="{Binding SearchCommand}"
+                            BackgroundColor="#2196F3"
+                            TextColor="White"
+                            CornerRadius="25"
+                            HeightRequest="50"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBool}}">
+                        <Button.Shadow>
+                            <Shadow Brush="#2196F3"
+                                    Offset="0,5"
+                                    Radius="10"
+                                    Opacity="0.3"/>
+                        </Button.Shadow>
+                    </Button>
+
+                    <Button Text="Limpiar"
+                            Command="{Binding ClearCommand}"
+                            BackgroundColor="Transparent"
+                            TextColor="#666"
+                            FontSize="14"
+                            IsVisible="{Binding ShowResult}"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Loading Indicator -->
+            <ActivityIndicator IsRunning="{Binding IsBusy}" 
+                               Color="#2196F3" 
+                               HeightRequest="40"/>
+
+            <!-- Tracking Result -->
+            <Frame IsVisible="{Binding ShowResult}"
+                   BackgroundColor="White" 
+                   CornerRadius="20" 
+                   HasShadow="True" 
+                   Padding="25">
+                <VerticalStackLayout Spacing="20">
+
+                    <!-- Shipment Code Header -->
+                    <Grid>
+                        <Border BackgroundColor="#E3F2FD"
+                                StrokeThickness="0"
+                                Padding="15,10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Label Text="{Binding TrackingInfo.ShipmentCode}"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center"
+                                   TextColor="#1976D2"/>
+                        </Border>
+                    </Grid>
+
+                    <!-- Timeline -->
+                    <CollectionView ItemsSource="{Binding TrackingInfo.Events}"
+                                    VerticalOptions="FillAndExpand">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,0,0,20">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Timeline Node -->
+                                    <Grid Grid.Column="0" Grid.Row="0">
+                                        <Ellipse Fill="{Binding StatusColor}" 
+                                                 WidthRequest="30" 
+                                                 HeightRequest="30"
+                                                 VerticalOptions="Start"/>
+                                        <Label Text="✓" 
+                                               TextColor="White" 
+                                               FontSize="14"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               IsVisible="{Binding IsCompleted}"/>
+                                    </Grid>
+
+                                    <!-- Timeline Line -->
+                                    <BoxView Grid.Column="0" Grid.Row="1"
+                                             Color="#E0E0E0"
+                                             WidthRequest="2"
+                                             HorizontalOptions="Center"
+                                             VerticalOptions="FillAndExpand"
+                                             Margin="0,5,0,0"/>
+
+                                    <!-- Event Content -->
+                                    <Frame Grid.Column="1" Grid.Row="0"
+                                           BackgroundColor="#F8F8F8"
+                                           CornerRadius="10"
+                                           Padding="15"
+                                           Margin="10,0,0,0"
+                                           HasShadow="False">
+                                        <VerticalStackLayout Spacing="5">
+                                            <Label Text="{Binding Status}" 
+                                                   FontAttributes="Bold"
+                                                   FontSize="16"
+                                                   TextColor="{Binding StatusColor}"/>
+
+                                            <Label Text="{Binding Description}"
+                                                   TextColor="#666"
+                                                   FontSize="14"/>
+
+                                            <Label FontSize="12">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="📍 " FontSize="12"/>
+                                                        <Span Text="{Binding Location}"
+                                                              TextColor="#999"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <Label Text="{Binding DriverName, StringFormat='🚚 {0}'}"
+                                                   TextColor="#999"
+                                                   FontSize="12"
+                                                   IsVisible="{Binding DriverName, Converter={x:Static x:String.IsNullOrEmpty}, ConverterParameter=True}"/>
+
+                                            <Label Text="{Binding DateTime, Converter={StaticResource DateConverter}}"
+                                                   TextColor="#999"
+                                                   FontSize="11"
+                                                   FontAttributes="Italic"/>
+                                        </VerticalStackLayout>
+                                    </Frame>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

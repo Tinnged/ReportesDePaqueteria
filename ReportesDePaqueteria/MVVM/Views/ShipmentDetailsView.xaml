@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReportesDePaqueteria.MVVM.Views.ShipmentDetailsView"
+             Title="Detalles del Envío"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView Padding="15">
+        <VerticalStackLayout Spacing="15">
+
+            <!-- Header Card -->
+            <Frame BackgroundColor="White" CornerRadius="15" HasShadow="True" Padding="20">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="📦 ENV-2025-001" 
+                           FontSize="24" 
+                           FontAttributes="Bold"
+                           TextColor="#333"/>
+                    <Label Text="Detalles completos del envío" 
+                           TextColor="#666"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Placeholder Content -->
+            <Frame BackgroundColor="White" CornerRadius="15" HasShadow="True" Padding="20">
+                <Label Text="Esta página mostrará todos los detalles del envío seleccionado, incluyendo historial de seguimiento, información del paquete, direcciones, y más."
+                       TextColor="#666"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="Center"
+                       Margin="0,50"/>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

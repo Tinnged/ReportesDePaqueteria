@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:vm="clr-namespace:ReportesDePaqueteria.MVVM.ViewModels"
+                xmlns:converters="clr-namespace:ReportesDePaqueteria.MVVM.Converters"
+             x:Class="ReportesDePaqueteria.MVVM.Views.IncidentsView"
+             Title="IncidentsView">
+    <ContentPage.Resources>
+        <converters:DateTimeToStringConverter x:Key="DateConverter"/>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <vm:IncidentsViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Reportar" Command="{Binding CreateIncidentCommand}" IconImageSource="report.png"/>
+    </ContentPage.ToolbarItems>
+
+    <RefreshView IsRefreshing="{Binding IsBusy}" 
+                 Command="{Binding RefreshCommand}"
+                 RefreshColor="#FF5722">
+        <Grid RowDefinitions="Auto,*" Padding="10">
+
+            <!-- Filters -->
+            <Frame Grid.Row="0" 
+                   BackgroundColor="White" 
+                   CornerRadius="15" 
+                   Padding="15"
+                   HasShadow="True"
+                   Margin="5,10,5,15">
+                <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,*" RowSpacing="10" ColumnSpacing="10">
+
+                    <Label Grid.Row="0" Grid.ColumnSpan="2" 
+                           Text="🔽 Filtros" 
+                           FontAttributes="Bold"
+                           TextColor="#333"
+                           FontSize="16"/>
+
+                    <Picker Grid.Row="1" Grid.Column="0"
+                            Title="Estado"
+                            ItemsSource="{Binding StatusOptions}"
+                            SelectedItem="{Binding SelectedStatus}"
+                            BackgroundColor="#F8F8F8"/>
+
+                    <Picker Grid.Row="1" Grid.Column="1"
+                            Title="Categoría"
+                            ItemsSource="{Binding CategoryOptions}"
+                            SelectedItem="{Binding SelectedCategory}"
+                            BackgroundColor="#F8F8F8"/>
+                </Grid>
+            </Frame>
+
+            <!-- Incidents List -->
+            <CollectionView Grid.Row="1" 
+                            ItemsSource="{Binding Incidents}"
+                            SelectionMode="None">
+
+                <CollectionView.EmptyView>
+                    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+                        <Image Source="no_incidents.png" 
+                               HeightRequest="120" 
+                               Opacity="0.5"/>
+                        <Label Text="No hay incidentes registrados" 
+                               TextColor="#999" 
+                               FontSize="16"
+                               HorizontalOptions="Center"/>
+                        <Label Text="¡Excelente! Todo está funcionando bien" 
+                               TextColor="#4CAF50" 
+                               FontSize="14"
+                               HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </CollectionView.EmptyView>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="White" 
+                               CornerRadius="15" 
+                               HasShadow="True"
+                               Padding="0"
+                               Margin="5,5">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:IncidentsViewModel}}, Path=SelectIncidentCommand}"
+                                    CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
+
+                            <!-- Priority Indicator Bar -->
+                            <Grid>
+                                <BoxView Color="{Binding PriorityColor}" 
+                                         WidthRequest="5" 
+                                         HorizontalOptions="Start"/>
+
+                                <Grid Padding="15,15,15,15" Margin="5,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Header -->
+                                    <Label Grid.Row="0" Grid.Column="0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="⚠️ " FontSize="20"/>
+                                                <Span Text="{Binding Code}" 
+                                                      FontAttributes="Bold"
+                                                      FontSize="16"
+                                                      TextColor="#333"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                    <!-- Priority Badge -->
+                                    <Border Grid.Row="0" Grid.Column="1"
+                                            BackgroundColor="{Binding PriorityColor}"
+                                            StrokeThickness="0"
+                                            Padding="10,4"
+                                            VerticalOptions="Center">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="12"/>
+                                        </Border.StrokeShape>
+                                        <Label Text="{Binding Priority}" 
+                                               TextColor="White" 
+                                               FontSize="11"
+                                               FontAttributes="Bold"/>
+                                    </Border>
+
+                                    <!-- Title -->
+                                    <Label Grid.Row="1" Grid.ColumnSpan="2"
+                                           Text="{Binding Title}"
+                                           FontAttributes="Bold"
+                                           FontSize="15"
+                                           TextColor="#333"
+                                           Margin="0,8,0,5"/>
+
+                                    <!-- Details -->
+                                    <Label Grid.Row="2" Grid.ColumnSpan="2">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="📦 " FontSize="12"/>
+                                                <Span Text="{Binding ShipmentCode}"
+                                                      TextColor="#666"
+                                                      FontSize="12"/>
+                                                <Span Text=" • "
+                                                      TextColor="#999"
+                                                      FontSize="12"/>
+                                                <Span Text="{Binding Category}"
+                                                      TextColor="#666"
+                                                      FontSize="12"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                    <!-- Footer -->
+                                    <Border Grid.Row="3" Grid.Column="0"
+                                            BackgroundColor="{Binding StatusColor}"
+                                            StrokeThickness="0"
+                                            Padding="8,3"
+                                            HorizontalOptions="Start"
+                                            Margin="0,8,0,0">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="10"/>
+                                        </Border.StrokeShape>
+                                        <Label Text="{Binding Status}" 
+                                               TextColor="White" 
+                                               FontSize="11"/>
+                                    </Border>
+
+                                    <Label Grid.Row="3" Grid.Column="1"
+                                           Text="{Binding Date, Converter={StaticResource DateConverter}, ConverterParameter='relative'}"
+                                           TextColor="#999"
+                                           FontSize="11"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Center"/>
+
+                                </Grid>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Floating Action Button -->
+            <ImageButton Grid.Row="1"
+                         Source="report_circle.png"
+                         Command="{Binding CreateIncidentCommand}"
+                         BackgroundColor="#FF5722"
+                         CornerRadius="28"
+                         HeightRequest="56"
+                         WidthRequest="56"
+                         VerticalOptions="End"
+                         HorizontalOptions="End"
+                         Margin="0,0,20,20">
+                <ImageButton.Shadow>
+                    <Shadow Brush="#FF5722"
+                            Offset="0,5"
+                            Radius="15"
+                            Opacity="0.4"/>
+                </ImageButton.Shadow>
+            </ImageButton>
+
+        </Grid>
+    </RefreshView>
+</ContentPage>

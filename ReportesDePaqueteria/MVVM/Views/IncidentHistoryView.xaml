@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="ReportesDePaqueteria.MVVM.Views.IncidentHistoryView"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Historial de Incidentes"
+             BackgroundColor="#F5F5F5">
+
+    <Grid RowDefinitions="Auto,*" Padding="15">
+
+        <!-- Summary Cards -->
+        <Grid Grid.Row="0" ColumnDefinitions="*,*,*" ColumnSpacing="10" Margin="0,10,0,20">
+            <!-- Total Incidents -->
+            <Frame Grid.Column="0" BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True">
+                <VerticalStackLayout>
+                    <Label Text="15" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#2196F3"/>
+                    <Label Text="Total" FontSize="12" HorizontalOptions="Center" TextColor="#666"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Resolved -->
+            <Frame Grid.Column="1" BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True">
+                <VerticalStackLayout>
+                    <Label Text="12" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#4CAF50"/>
+                    <Label Text="Resueltos" FontSize="12" HorizontalOptions="Center" TextColor="#666"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Pending -->
+            <Frame Grid.Column="2" BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True">
+                <VerticalStackLayout>
+                    <Label Text="3" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#FF5722"/>
+                    <Label Text="Pendientes" FontSize="12" HorizontalOptions="Center" TextColor="#666"/>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+
+        <!-- Incidents List -->
+        <Frame Grid.Row="1" BackgroundColor="White" CornerRadius="15" HasShadow="True" Padding="20">
+            <Label Text="Aquí se mostrará el historial completo de incidentes reportados por el usuario."
+                   TextColor="#666"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center"/>
+        </Frame>
+
+    </Grid>
+
+</ContentPage>

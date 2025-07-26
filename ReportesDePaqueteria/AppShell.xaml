@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ReportesDePaqueteria.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ReportesDePaqueteria"
+    Shell.FlyoutBehavior="Disabled"
+    Title="ReportesDePaqueteria">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{DynamicResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="White" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{DynamicResource Primary}"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95999999"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{DynamicResource Primary}"/>
+            </Style>
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="TabBar" />
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="ShellContent" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <!-- Login Page (No TabBar) -->
+    <ShellContent Route="login"
+                  ContentTemplate="{DataTemplate views:LoginPage}" />
+
+    <!-- Main TabBar -->
+    <TabBar Route="main">
+        <Tab Title="Envíos" Icon="box.png">
+            <ShellContent Route="shipments"
+                          ContentTemplate="{DataTemplate views:ShipmentsPage}" />
+        </Tab>
+
+        <Tab Title="Incidentes" Icon="warning.png">
+            <ShellContent Route="incidents"
+                          ContentTemplate="{DataTemplate views:IncidentsPage}" />
+        </Tab>
+
+        <Tab Title="Rastrear" Icon="search.png">
+            <ShellContent Route="tracking"
+                          ContentTemplate="{DataTemplate views:TrackingPage}" />
+        </Tab>
+
+        <Tab Title="Perfil" Icon="user.png">
+            <ShellContent Route="profile"
+                          ContentTemplate="{DataTemplate views:ProfilePage}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

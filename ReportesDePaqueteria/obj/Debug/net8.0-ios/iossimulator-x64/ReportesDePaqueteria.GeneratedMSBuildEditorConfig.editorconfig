@@ -1,0 +1,110 @@
+is_global = true
+build_property.PropertyChangedAnalyzerConfiguration = 
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ReportesDePaqueteria
+build_property.ProjectDir = C:\Users\Gabriel\source\repos\ReportesDePaqueteria\ReportesDePaqueteria\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/MVVM/Views/CreateIncidentView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.MVVM.Views.CreateIncidentView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CreateIncidentView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CreateIncidentView.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/MVVM/Views/CreateShipmentView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.MVVM.Views.CreateShipmentView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CreateShipmentView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CreateShipmentView.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/MVVM/Views/IncidentDetailsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.MVVM.Views.IncidentDetailsView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\IncidentDetailsView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\IncidentDetailsView.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/MVVM/Views/IncidentHistoryView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.MVVM.Views.IncidentHistoryView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\IncidentHistoryView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\IncidentHistoryView.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/MVVM/Views/IncidentsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.MVVM.Views.IncidentsView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\IncidentsView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\IncidentsView.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/MVVM/Views/LoginView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.MVVM.Views.LoginView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\LoginView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\LoginView.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/MVVM/Views/ProfileView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.MVVM.Views.ProfileView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ProfileView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ProfileView.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/MVVM/Views/ShipmentDetailsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.MVVM.Views.ShipmentDetailsView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ShipmentDetailsView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ShipmentDetailsView.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/MVVM/Views/ShipmentsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.MVVM.Views.ShipmentsView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ShipmentsView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ShipmentsView.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/MVVM/Views/TrackingView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.MVVM.Views.TrackingView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\TrackingView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\TrackingView.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Gabriel/source/repos/ReportesDePaqueteria/ReportesDePaqueteria/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ReportesDePaqueteria.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

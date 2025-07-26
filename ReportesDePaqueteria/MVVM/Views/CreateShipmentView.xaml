@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ReportesDePaqueteria.MVVM.ViewModels"
+             xmlns:converters="clr-namespace:ReportesDePaqueteria.MVVM.Converters"
+             x:Class="ReportesDePaqueteria.MVVM.Views.CreateShipmentView"
+             Title="{Binding Title}"
+             BackgroundColor="#F5F5F5">
+
+    <ContentPage.BindingContext>
+        <vm:CreateShipmentViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Guardar" Command="{Binding SaveCommand}" IconImageSource="save.png"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="15">
+
+            <!-- Package Information Card -->
+            <Frame BackgroundColor="White" CornerRadius="15" HasShadow="True" Padding="20">
+                <VerticalStackLayout Spacing="15">
+
+                    <Label Text="📦 Información del Paquete" 
+                           FontAttributes="Bold" 
+                           FontSize="18"
+                           TextColor="#333"/>
+
+                    <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Entry Text="{Binding Description}"
+                               Placeholder="Descripción del paquete"
+                               TextColor="#333"
+                               PlaceholderColor="#999"/>
+                    </Border>
+
+                    <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,5">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Picker Title="Tipo de paquete"
+                                ItemsSource="{Binding PackageTypes}"
+                                SelectedItem="{Binding PackageType}"
+                                TextColor="#333"
+                                TitleColor="#999"/>
+                    </Border>
+
+                    <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Entry Grid.Column="0"
+                                   Text="{Binding Weight}"
+                                   Placeholder="Peso"
+                                   Keyboard="Numeric"
+                                   TextColor="#333"
+                                   PlaceholderColor="#999"/>
+                            <Label Grid.Column="1" Text="kg" 
+                                   VerticalOptions="Center" 
+                                   TextColor="#666"
+                                   FontAttributes="Bold"/>
+                        </Grid>
+                    </Border>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Origin Address Card -->
+            <Frame BackgroundColor="White" CornerRadius="15" HasShadow="True" Padding="20">
+                <VerticalStackLayout Spacing="15">
+
+                    <Label Text="📍 Dirección de Origen" 
+                           FontAttributes="Bold" 
+                           FontSize="18"
+                           TextColor="#333"/>
+
+                    <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Entry Text="{Binding OriginStreet}"
+                               Placeholder="Dirección completa"
+                               TextColor="#333"
+                               PlaceholderColor="#999"/>
+                    </Border>
+
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                        <Border Grid.Column="0" StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Entry Text="{Binding OriginCity}"
+                                   Placeholder="Ciudad"
+                                   TextColor="#333"
+                                   PlaceholderColor="#999"/>
+                        </Border>
+
+                        <Border Grid.Column="1" StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Entry Text="{Binding OriginPostalCode}"
+                                   Placeholder="Código Postal"
+                                   Keyboard="Numeric"
+                                   TextColor="#333"
+                                   PlaceholderColor="#999"/>
+                        </Border>
+                    </Grid>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Destination Address Card -->
+            <Frame BackgroundColor="White" CornerRadius="15" HasShadow="True" Padding="20">
+                <VerticalStackLayout Spacing="15">
+
+                    <Label Text="🎯 Dirección de Destino" 
+                           FontAttributes="Bold" 
+                           FontSize="18"
+                           TextColor="#333"/>
+
+                    <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Entry Text="{Binding DestinationStreet}"
+                               Placeholder="Dirección completa"
+                               TextColor="#333"
+                               PlaceholderColor="#999"/>
+                    </Border>
+
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                        <Border Grid.Column="0" StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Entry Text="{Binding DestinationCity}"
+                                   Placeholder="Ciudad"
+                                   TextColor="#333"
+                                   PlaceholderColor="#999"/>
+                        </Border>
+
+                        <Border Grid.Column="1" StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Entry Text="{Binding DestinationPostalCode}"
+                                   Placeholder="Código Postal"
+                                   Keyboard="Numeric"
+                                   TextColor="#333"
+                                   PlaceholderColor="#999"/>
+                        </Border>
+                    </Grid>
+
+                    <BoxView HeightRequest="1" Color="#E0E0E0" Margin="0,5"/>
+
+                    <Label Text="👤 Información del Destinatario" 
+                           FontAttributes="Bold" 
+                           FontSize="16"
+                           TextColor="#666"/>
+
+                    <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Entry Text="{Binding RecipientName}"
+                               Placeholder="Nombre completo"
+                               TextColor="#333"
+                               PlaceholderColor="#999"/>
+                    </Border>
+
+                    <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Entry Text="{Binding RecipientPhone}"
+                               Placeholder="Teléfono de contacto"
+                               Keyboard="Telephone"
+                               TextColor="#333"
+                               PlaceholderColor="#999"/>
+                    </Border>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Action Buttons -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10" Margin="0,10,0,20">
+                <Button Grid.Column="0"
+                        Text="Cancelar"
+                        Command="{Binding CancelCommand}"
+                        BackgroundColor="White"
+                        TextColor="#666"
+                        BorderColor="#E0E0E0"
+                        BorderWidth="2"
+                        CornerRadius="25"
+                        HeightRequest="50"/>
+
+                <Button Grid.Column="1"
+                        Text="Registrar Envío"
+                        Command="{Binding SaveCommand}"
+                        BackgroundColor="#4CAF50"
+                        TextColor="White"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        FontAttributes="Bold">
+                    <Button.Shadow>
+                        <Shadow Brush="#4CAF50"
+                                Offset="0,5"
+                                Radius="10"
+                                Opacity="0.3"/>
+                    </Button.Shadow>
+                </Button>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+    <!-- Loading Overlay -->
+    <Grid IsVisible="{Binding IsBusy}" BackgroundColor="#80000000">
+        <Frame BackgroundColor="White" 
+               CornerRadius="15" 
+               Padding="30"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+            <VerticalStackLayout Spacing="20">
+                <ActivityIndicator IsRunning="True" 
+                                   Color="#2196F3" 
+                                   WidthRequest="50" 
+                                   HeightRequest="50"/>
+                <Label Text="Registrando envío..." 
+                       HorizontalOptions="Center"
+                       TextColor="#333"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

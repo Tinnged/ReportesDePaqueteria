@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:vm="clr-namespace:ReportesDePaqueteria.MVVM.ViewModels"
+             x:Class="ReportesDePaqueteria.MVVM.Views.CreateIncidentView"
+             Title="{Binding Title}"
+             BackgroundColor="#F5F5F5">
+
+    <ContentPage.BindingContext>
+        <vm:CreateIncidentViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Reportar" Command="{Binding SaveCommand}" IconImageSource="send.png"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="15">
+
+            <!-- Header Card -->
+            <Frame BackgroundColor="#FFF3E0" 
+                   CornerRadius="15" 
+                   HasShadow="False"
+                   BorderColor="#FFB74D"
+                   Padding="15">
+                <Grid ColumnDefinitions="Auto,*">
+                    <Label Grid.Column="0" Text="⚠️" FontSize="40" VerticalOptions="Center"/>
+                    <VerticalStackLayout Grid.Column="1" Margin="10,0,0,0" VerticalOptions="Center">
+                        <Label Text="Reportar Incidente" 
+                               FontAttributes="Bold" 
+                               FontSize="20"
+                               TextColor="#E65100"/>
+                        <Label Text="Ayúdanos a mejorar nuestro servicio" 
+                               FontSize="14"
+                               TextColor="#F57C00"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- Incident Information Card -->
+            <Frame BackgroundColor="White" CornerRadius="15" HasShadow="True" Padding="20">
+                <VerticalStackLayout Spacing="15">
+
+                    <Label Text="📦 Envío Afectado" 
+                           FontAttributes="Bold" 
+                           FontSize="18"
+                           TextColor="#333"/>
+
+                    <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,5">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Picker Title="Seleccionar envío"
+                                ItemsSource="{Binding Shipments}"
+                                SelectedItem="{Binding SelectedShipment}"
+                                ItemDisplayBinding="{Binding Code}"
+                                TextColor="#333"
+                                TitleColor="#999"/>
+                    </Border>
+
+                    <!-- Selected Shipment Details -->
+                    <Frame IsVisible="{Binding SelectedShipment, Converter={x:Static x:String.IsNullOrEmpty}, ConverterParameter=True}"
+                           BackgroundColor="#E3F2FD"
+                           CornerRadius="10"
+                           Padding="15"
+                           BorderColor="#90CAF9"
+                           HasShadow="False">
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Ruta: " FontAttributes="Bold" TextColor="#1565C0"/>
+                                    <Span Text="{Binding SelectedShipment.Route}" TextColor="#1976D2"/>
+                                    <Span Text="{x:Static x:Environment.NewLine}"/>
+                                    <Span Text="Estado: " FontAttributes="Bold" TextColor="#1565C0"/>
+                                    <Span Text="{Binding SelectedShipment.Status}" TextColor="#1976D2"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Frame>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Incident Details Card -->
+            <Frame BackgroundColor="White" CornerRadius="15" HasShadow="True" Padding="20">
+                <VerticalStackLayout Spacing="15">
+
+                    <Label Text="📋 Detalles del Incidente" 
+                           FontAttributes="Bold" 
+                           FontSize="18"
+                           TextColor="#333"/>
+
+                    <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,5">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Picker Title="Categoría del incidente"
+                                ItemsSource="{Binding Categories}"
+                                SelectedItem="{Binding Category}"
+                                TextColor="#333"
+                                TitleColor="#999"/>
+                    </Border>
+
+                    <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,5">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Picker Title="Prioridad"
+                                ItemsSource="{Binding Priorities}"
+                                SelectedItem="{Binding Priority}"
+                                TextColor="#333"
+                                TitleColor="#999"/>
+                    </Border>
+
+                    <!-- Priority Indicator -->
+                    <Grid ColumnDefinitions="Auto,*" Margin="0,5,0,0">
+                        <BoxView Grid.Column="0" 
+                                 WidthRequest="4" 
+                                 Color="{Binding Priority, Converter={x:Static vm:PriorityToColorConverter.Instance}}"
+                                 VerticalOptions="FillAndExpand"
+                                 Margin="0,0,10,0"/>
+                        <Label Grid.Column="1" 
+                               Text="{Binding Priority, StringFormat='Prioridad seleccionada: {0}'}"
+                               TextColor="#666"
+                               FontSize="12"
+                               VerticalOptions="Center"/>
+                    </Grid>
+
+                    <Label Text="Descripción detallada" 
+                           FontAttributes="Bold" 
+                           FontSize="16"
+                           TextColor="#666"
+                           Margin="0,10,0,0"/>
+
+                    <Border StrokeThickness="1" 
+                            Stroke="#E0E0E0" 
+                            BackgroundColor="#FAFAFA" 
+                            Padding="10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Editor Text="{Binding Description}"
+                                Placeholder="Describa detalladamente el incidente..."
+                                HeightRequest="150"
+                                TextColor="#333"
+                                PlaceholderColor="#999"
+                                BackgroundColor="Transparent"/>
+                    </Border>
+
+                    <Label Text="{Binding Description.Length, StringFormat='{0}/500 caracteres'}"
+                           HorizontalOptions="End"
+                           TextColor="#999"
+                           FontSize="11"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Evidence Section (Optional) -->
+            <Frame BackgroundColor="White" CornerRadius="15" HasShadow="True" Padding="20">
+                <VerticalStackLayout Spacing="15">
+
+                    <Label Text="📸 Evidencia (Opcional)" 
+                           FontAttributes="Bold" 
+                           FontSize="18"
+                           TextColor="#333"/>
+
+                    <Button Text="📷 Adjuntar Foto"
+                            BackgroundColor="#E3F2FD"
+                            TextColor="#1976D2"
+                            BorderWidth="0"
+                            CornerRadius="10"
+                            HeightRequest="50"/>
+
+                    <Label Text="Puede adjuntar fotos del paquete dañado o evidencia relacionada"
+                           TextColor="#999"
+                           FontSize="12"
+                           HorizontalOptions="Center"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Action Buttons -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10" Margin="0,10,0,20">
+                <Button Grid.Column="0"
+                        Text="Cancelar"
+                        Command="{Binding CancelCommand}"
+                        BackgroundColor="White"
+                        TextColor="#666"
+                        BorderColor="#E0E0E0"
+                        BorderWidth="2"
+                        CornerRadius="25"
+                        HeightRequest="50"/>
+
+                <Button Grid.Column="1"
+                        Text="Reportar Incidente"
+                        Command="{Binding SaveCommand}"
+                        BackgroundColor="#FF5722"
+                        TextColor="White"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        FontAttributes="Bold">
+                    <Button.Shadow>
+                        <Shadow Brush="#FF5722"
+                                Offset="0,5"
+                                Radius="10"
+                                Opacity="0.3"/>
+                    </Button.Shadow>
+                </Button>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+    <!-- Loading Overlay -->
+    <Grid IsVisible="{Binding IsBusy}" BackgroundColor="#80000000">
+        <Frame BackgroundColor="White" 
+               CornerRadius="15" 
+               Padding="30"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+            <VerticalStackLayout Spacing="20">
+                <ActivityIndicator IsRunning="True" 
+                                   Color="#FF5722" 
+                                   WidthRequest="50" 
+                                   HeightRequest="50"/>
+                <Label Text="Reportando incidente..." 
+                       HorizontalOptions="Center"
+                       TextColor="#333"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

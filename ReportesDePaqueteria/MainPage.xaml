@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReportesDePaqueteria.MainPage">
+
+    <!-- This page is not used directly as the app uses Shell navigation -->
+    <!-- The actual pages are in the Views folder -->
+    <VerticalStackLayout Padding="30" VerticalOptions="Center">
+        <Label Text="Sistema de Gestión Logística" 
+               FontSize="24" 
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+        <Label Text="Esta aplicación usa Shell para la navegación" 
+               FontSize="16"
+               HorizontalOptions="Center"
+               Margin="0,20"/>
+    </VerticalStackLayout>
+
+</ContentPage>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReportesDePaqueteria.MVVM.Views.ProfileView"
+             Title="{Binding Title}"
+             BackgroundColor="#F5F5F5">
+
+    <ContentPage.BindingContext>
+        <vm:ProfileViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+
+            <!-- Profile Header Card -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="20" 
+                   HasShadow="True" 
+                   Padding="0"
+                   HeightRequest="220">
+                <Grid>
+                    <!-- Background Gradient -->
+                    <BoxView VerticalOptions="FillAndExpand">
+                        <BoxView.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="#2196F3" Offset="0.0" />
+                                <GradientStop Color="#1976D2" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </BoxView.Background>
+                    </BoxView>
+
+                    <VerticalStackLayout Spacing="10" Padding="20" VerticalOptions="Center">
+                        <!-- Avatar -->
+                        <Border StrokeThickness="3"
+                                Stroke="White"
+                                BackgroundColor="White"
+                                HeightRequest="100"
+                                WidthRequest="100"
+                                HorizontalOptions="Center">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="50"/>
+                            </Border.StrokeShape>
+                            <Image Source="{Binding CurrentUser.AvatarUrl}" 
+                                   Aspect="AspectFill"/>
+                        </Border>
+
+                        <!-- User Info -->
+                        <Label Text="{Binding CurrentUser.Name}"
+                               FontSize="22"
+                               FontAttributes="Bold"
+                               TextColor="White"
+                               HorizontalOptions="Center"/>
+
+                        <Label Text="{Binding CurrentUser.Email}"
+                               FontSize="14"
+                               TextColor="White"
+                               Opacity="0.9"
+                               HorizontalOptions="Center"/>
+
+                        <!-- Role Badge -->
+                        <Border BackgroundColor="#FFFFFF30"
+                                StrokeThickness="0"
+                                Padding="15,5"
+                                HorizontalOptions="Center">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="15"/>
+                            </Border.StrokeShape>
+                            <Label Text="{Binding CurrentUser.Role}"
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   FontSize="12"/>
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <!-- Edit Profile Button -->
+                    <ImageButton Source="edit.png"
+                                 Command="{Binding EditProfileCommand}"
+                                 BackgroundColor="#FFFFFF30"
+                                 CornerRadius="20"
+                                 HeightRequest="40"
+                                 WidthRequest="40"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="Start"
+                                 Margin="20"/>
+                </Grid>
+            </Frame>
+
+            <!-- Statistics Cards -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                <!-- Total Shipments Card -->
+                <Frame Grid.Column="0" 
+                       BackgroundColor="White" 
+                       CornerRadius="15" 
+                       HasShadow="True" 
+                       Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="📦" FontSize="30" HorizontalOptions="Center"/>
+                        <Label Text="{Binding TotalShipments}" 
+                               FontSize="28" 
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               TextColor="#2196F3"/>
+                        <Label Text="Total Envíos" 
+                               FontSize="12" 
+                               HorizontalOptions="Center"
+                               TextColor="#666"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Active Incidents Card -->
+                <Frame Grid.Column="1" 
+                       BackgroundColor="White" 
+                       CornerRadius="15" 
+                       HasShadow="True" 
+                       Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="⚠️" FontSize="30" HorizontalOptions="Center"/>
+                        <Label Text="{Binding ActiveIncidents}" 
+                               FontSize="28" 
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               TextColor="#FF5722"/>
+                        <Label Text="Incidentes Activos" 
+                               FontSize="12" 
+                               HorizontalOptions="Center"
+                               TextColor="#666"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
+
+            <!-- Menu Options -->
+            <Frame BackgroundColor="White" 
+                   CornerRadius="20" 
+                   HasShadow="True" 
+                   Padding="0">
+                <VerticalStackLayout Spacing="0">
+
+                    <!-- My Shipments -->
+                    <Grid Padding="20,15" ColumnDefinitions="Auto,*,Auto">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding MyShipmentsCommand}"/>
+                        </Grid.GestureRecognizers>
+
+                        <Label Grid.Column="0" Text="📦" FontSize="24" VerticalOptions="Center"/>
+                        <VerticalStackLayout Grid.Column="1" Margin="15,0,0,0" VerticalOptions="Center">
+                            <Label Text="Mis Envíos" FontAttributes="Bold" TextColor="#333"/>
+                            <Label Text="Ver historial completo" FontSize="12" TextColor="#666"/>
+                        </VerticalStackLayout>
+                        <Label Grid.Column="2" Text="›" FontSize="20" TextColor="#999" VerticalOptions="Center"/>
+                    </Grid>
+
+                    <BoxView HeightRequest="1" Color="#F0F0F0" Margin="60,0,20,0"/>
+
+                    <!-- Incident History -->
+                    <Grid Padding="20,15" ColumnDefinitions="Auto,*,Auto">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding IncidentHistoryCommand}"/>
+                        </Grid.GestureRecognizers>
+
+                        <Label Grid.Column="0" Text="📋" FontSize="24" VerticalOptions="Center"/>
+                        <VerticalStackLayout Grid.Column="1" Margin="15,0,0,0" VerticalOptions="Center">
+                            <Label Text="Historial de Incidentes" FontAttributes="Bold" TextColor="#333"/>
+                            <Label Text="Incidentes reportados" FontSize="12" TextColor="#666"/>
+                        </VerticalStackLayout>
+                        <Label Grid.Column="2" Text="›" FontSize="20" TextColor="#999" VerticalOptions="Center"/>
+                    </Grid>
+
+                    <BoxView HeightRequest="1" Color="#F0F0F0" Margin="60,0,20,0"/>
+
+                    <!-- Settings -->
+                    <Grid Padding="20,15" ColumnDefinitions="Auto,*,Auto">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SettingsCommand}"/>
+                        </Grid.GestureRecognizers>
+
+                        <Label Grid.Column="0" Text="⚙️" FontSize="24" VerticalOptions="Center"/>
+                        <VerticalStackLayout Grid.Column="1" Margin="15,0,0,0" VerticalOptions="Center">
+                            <Label Text="Configuración" FontAttributes="Bold" TextColor="#333"/>
+                            <Label Text="Preferencias de la app" FontSize="12" TextColor="#666"/>
+                        </VerticalStackLayout>
+                        <Label Grid.Column="2" Text="›" FontSize="20" TextColor="#999" VerticalOptions="Center"/>
+                    </Grid>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Logout Button -->
+            <Button Text="Cerrar Sesión"
+                    Command="{Binding LogoutCommand}"
+                    BackgroundColor="#FF5722"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontAttributes="Bold"
+                    Margin="0,10,0,20">
+                <Button.Shadow>
+                    <Shadow Brush="#FF5722"
+                            Offset="0,5"
+                            Radius="10"
+                            Opacity="0.3"/>
+                </Button.Shadow>
+            </Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

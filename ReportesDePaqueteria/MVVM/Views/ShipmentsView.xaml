@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReportesDePaqueteria.MVVM.Views.ShipmentsView"
+             Title="{Binding Title}"
+             BackgroundColor="#F5F5F5">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Nuevo" Command="{Binding CreateShipmentCommand}" IconImageSource="add.png"/>
+    </ContentPage.ToolbarItems>
+
+    <RefreshView IsRefreshing="{Binding IsBusy}" 
+                 Command="{Binding RefreshCommand}"
+                 RefreshColor="#2196F3">
+        <Grid RowDefinitions="Auto,*" Padding="10">
+
+            <!-- Search Bar -->
+            <Frame Grid.Row="0" 
+                   BackgroundColor="White" 
+                   CornerRadius="25" 
+                   Padding="5,0"
+                   HasShadow="True"
+                   Margin="5,10,5,15">
+                <Grid ColumnDefinitions="Auto,*">
+                    <Label Text="🔍" FontSize="20" VerticalOptions="Center" Margin="10,0"/>
+                    <Entry Grid.Column="1"
+                           Text="{Binding SearchText}"
+                           Placeholder="Buscar envío por código..."
+                           BackgroundColor="Transparent"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </Frame>
+
+            <!-- Shipments List -->
+            <CollectionView Grid.Row="1" 
+                            ItemsSource="{Binding Shipments}"
+                            SelectionMode="None">
+
+                <CollectionView.EmptyView>
+                    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+                        <Image Source="empty_box.png" 
+                               HeightRequest="120" 
+                               Opacity="0.5"/>
+                        <Label Text="No hay envíos registrados" 
+                               TextColor="#999" 
+                               FontSize="16"
+                               HorizontalOptions="Center"/>
+                        <Button Text="Crear Nuevo Envío"
+                                Command="{Binding CreateShipmentCommand}"
+                                BackgroundColor="#2196F3"
+                                TextColor="White"
+                                CornerRadius="20"
+                                Padding="20,10"/>
+                    </VerticalStackLayout>
+                </CollectionView.EmptyView>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView Margin="0,5">
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Rastrear"
+                                               BackgroundColor="#4CAF50"
+                                               IconImageSource="track.png"/>
+                                    <SwipeItem Text="Detalles"
+                                               BackgroundColor="#2196F3"
+                                               IconImageSource="info.png"/>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+
+                            <Frame BackgroundColor="White" 
+                                   CornerRadius="15" 
+                                   HasShadow="True"
+                                   Padding="0"
+                                   Margin="5,0">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ShipmentsViewModel}}, Path=SelectShipmentCommand}"
+                                        CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+
+                                <Grid Padding="15">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Header -->
+                                    <Label Grid.Row="0" Grid.Column="0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="📦 " FontSize="20"/>
+                                                <Span Text="{Binding Code}" 
+                                                      FontAttributes="Bold"
+                                                      FontSize="18"
+                                                      TextColor="#333"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                    <!-- Status Badge -->
+                                    <Border Grid.Row="0" Grid.Column="1"
+                                            BackgroundColor="{Binding StatusColor}"
+                                            StrokeThickness="0"
+                                            Padding="12,6"
+                                            VerticalOptions="Center">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="15"/>
+                                        </Border.StrokeShape>
+                                        <Label Text="{Binding Status}" 
+                                               TextColor="White" 
+                                               FontSize="12"
+                                               FontAttributes="Bold"/>
+                                    </Border>
+
+                                    <!-- Route -->
+                                    <Label Grid.Row="1" Grid.ColumnSpan="2" Margin="0,8,0,0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="📍 " FontSize="16"/>
+                                                <Span Text="{Binding Route}"
+                                                      TextColor="#666"
+                                                      FontSize="15"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                    <!-- Package Info -->
+                                    <Label Grid.Row="2" Grid.ColumnSpan="2" Margin="0,5,0,0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="📐 " FontSize="14"/>
+                                                <Span Text="{Binding PackageType}"
+                                                      TextColor="#999"
+                                                      FontSize="13"/>
+                                                <Span Text=" • "
+                                                      TextColor="#999"
+                                                      FontSize="13"/>
+                                                <Span Text="{Binding Weight, StringFormat='{0} kg'}"
+                                                      TextColor="#999"
+                                                      FontSize="13"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                    <!-- Driver -->
+                                    <Label Grid.Row="3" Grid.ColumnSpan="2" Margin="0,5,0,0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="🚚 " FontSize="14"/>
+                                                <Span Text="Transportista: "
+                                                      TextColor="#999"
+                                                      FontSize="12"/>
+                                                <Span Text="{Binding Driver}"
+                                                      TextColor="#666"
+                                                      FontSize="12"
+                                                      FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                </Grid>
+                            </Frame>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Floating Action Button -->
+            <ImageButton Grid.Row="1"
+                         Source="add_circle.png"
+                         Command="{Binding CreateShipmentCommand}"
+                         BackgroundColor="#2196F3"
+                         CornerRadius="28"
+                         HeightRequest="56"
+                         WidthRequest="56"
+                         VerticalOptions="End"
+                         HorizontalOptions="End"
+                         Margin="0,0,20,20">
+                <ImageButton.Shadow>
+                    <Shadow Brush="#2196F3"
+                            Offset="0,5"
+                            Radius="15"
+                            Opacity="0.4"/>
+                </ImageButton.Shadow>
+            </ImageButton>
+
+        </Grid>
+    </RefreshView>
+</ContentPage>

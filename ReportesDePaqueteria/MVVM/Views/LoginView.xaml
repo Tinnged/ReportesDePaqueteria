@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReportesDePaqueteria.MVVM.Views.LoginView"
+             Title="{Binding Title}"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#F5F5F5">
+
+    <Grid>
+        <!-- Background Gradient -->
+        <BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#2196F3" Offset="0.0" />
+                    <GradientStop Color="#1976D2" Offset="1.0" />
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+        <ScrollView>
+            <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+                <!-- Logo and Title -->
+                <Frame BackgroundColor="White" 
+                       CornerRadius="60" 
+                       HeightRequest="120" 
+                       WidthRequest="120"
+                       HorizontalOptions="Center"
+                       HasShadow="True"
+                       Padding="20">
+                    <Image Source="logo.png" Aspect="AspectFit"/>
+                </Frame>
+
+                <Label Text="Sistema de Gestión Logística"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Bienvenido de vuelta"
+                       FontSize="16"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       Opacity="0.9"
+                       Margin="0,-10,0,20"/>
+
+                <!-- Login Form -->
+                <Frame BackgroundColor="White" 
+                       CornerRadius="20" 
+                       HasShadow="True"
+                       Padding="25">
+                    <VerticalStackLayout Spacing="20">
+
+                        <!-- Email Entry -->
+                        <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Grid ColumnDefinitions="Auto,*">
+                                <Label Text="📧" FontSize="20" VerticalOptions="Center" Margin="0,0,10,0"/>
+                                <Entry Grid.Column="1"
+                                       Text="{Binding Email}"
+                                       Placeholder="Correo electrónico"
+                                       Keyboard="Email"
+                                       TextColor="#333"
+                                       PlaceholderColor="#999"
+                                       BackgroundColor="Transparent"/>
+                            </Grid>
+                        </Border>
+
+                        <!-- Password Entry -->
+                        <Border StrokeThickness="0" BackgroundColor="#F8F8F8" Padding="15,10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Grid ColumnDefinitions="Auto,*">
+                                <Label Text="🔒" FontSize="20" VerticalOptions="Center" Margin="0,0,10,0"/>
+                                <Entry Grid.Column="1"
+                                       Text="{Binding Password}"
+                                       Placeholder="Contraseña"
+                                       IsPassword="True"
+                                       TextColor="#333"
+                                       PlaceholderColor="#999"
+                                       BackgroundColor="Transparent"/>
+                            </Grid>
+                        </Border>
+
+                        <!-- Forgot Password Link -->
+                        <Label Text="¿Olvidaste tu contraseña?"
+                               TextColor="#2196F3"
+                               HorizontalOptions="End"
+                               FontSize="14"
+                               TextDecorations="Underline">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <!-- Login Button -->
+                        <Button Text="Iniciar Sesión"
+                                Command="{Binding LoginCommand}"
+                                BackgroundColor="#2196F3"
+                                TextColor="White"
+                                CornerRadius="25"
+                                HeightRequest="50"
+                                FontAttributes="Bold"
+                                FontSize="16">
+                            <Button.Shadow>
+                                <Shadow Brush="#2196F3"
+                                        Offset="0,5"
+                                        Radius="10"
+                                        Opacity="0.3"/>
+                            </Button.Shadow>
+                        </Button>
+
+                        <!-- Divider -->
+                        <Grid ColumnDefinitions="*,Auto,*" Margin="0,10">
+                            <BoxView Grid.Column="0" HeightRequest="1" BackgroundColor="#E0E0E0" VerticalOptions="Center"/>
+                            <Label Grid.Column="1" Text="O" TextColor="#999" Margin="10,0" VerticalOptions="Center"/>
+                            <BoxView Grid.Column="2" HeightRequest="1" BackgroundColor="#E0E0E0" VerticalOptions="Center"/>
+                        </Grid>
+
+                        <!-- Register Button -->
+                        <Button Text="Crear Nueva Cuenta"
+                                Command="{Binding RegisterCommand}"
+                                BackgroundColor="White"
+                                TextColor="#2196F3"
+                                BorderColor="#2196F3"
+                                BorderWidth="2"
+                                CornerRadius="25"
+                                HeightRequest="50"
+                                FontAttributes="Bold"/>
+
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Demo Credentials Info -->
+                <Frame BackgroundColor="#FFFFFF20" 
+                       CornerRadius="10" 
+                       Padding="15"
+                       BorderColor="White"
+                       HasShadow="False">
+                    <VerticalStackLayout>
+                        <Label Text="Credenciales de prueba:" 
+                               TextColor="White" 
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"/>
+                        <Label Text="Admin: admin@ejemplo.com / admin123" 
+                               TextColor="White" 
+                               FontSize="12"
+                               HorizontalOptions="Center"/>
+                        <Label Text="Cliente: cliente@ejemplo.com / cliente123" 
+                               TextColor="White" 
+                               FontSize="12"
+                               HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Loading Overlay -->
+        <Grid IsVisible="{Binding IsBusy}" BackgroundColor="#80000000">
+            <ActivityIndicator IsRunning="True" 
+                               Color="White" 
+                               WidthRequest="50" 
+                               HeightRequest="50"
+                               VerticalOptions="Center" 
+                               HorizontalOptions="Center"/>
+        </Grid>
+    </Grid>
+</ContentPage>
